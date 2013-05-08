@@ -1,0 +1,5 @@
+_trial_temp
+apidocs
+dist
+commandant.egg-info
+*.pyc

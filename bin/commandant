@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+if os.path.isdir("commandant"):
+    sys.path.insert(0, "./")
+
+from commandant.entry_point import main
+
+
+try:
+    main(sys.argv)
+except StandardError, e:
+    if os.environ.get("COMMANDANT_DEBUG"):
+        raise
+    sys.exit(str(e))

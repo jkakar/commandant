@@ -1,0 +1,8 @@
+Basic help highlights frequently used commands.
+
+example -- A collection of command examples that work with Commandant.
+http://launchpad.net/commandant
+
+Basic commands:
+  example help commands  List all commands
+  example help topics    List all help topics

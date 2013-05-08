@@ -1,0 +1,7 @@
+Greet the world!
+
+Purpose: Greet the world!
+Usage:   example hello
+
+Description:
+  Print 'Hello, world!' to the screen.

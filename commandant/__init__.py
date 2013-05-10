@@ -1,4 +1,4 @@
-"""Commandant is a framework for building command-oriented tools.
+"""Commandant is a toolkit for building command-oriented tools.
 
 A command-oriented command-line program takes a command name as its first
 argument, which it finds and runs, passing along any subsequent
@@ -12,5 +12,5 @@ directory.  Commandant, when pointed at the directory containing the commands,
 provides a Bazaar-like user interface to discover and run them.
 """
 
-__version__ = "0.4.0"
-__version_info__ = (0, 4, 0)
+__version__ = "0.5.0"
+__version_info__ = (0, 5, 0)

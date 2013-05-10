@@ -1,0 +1,7 @@
+bzr == 2.5.1
+mocker == 1.1.1
+pep8 == 1.4.5
+pyflakes == 0.7.2
+testresources == 0.2.7
+testtools == 0.9.30
+Twisted == 12.3.0

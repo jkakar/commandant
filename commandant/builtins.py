@@ -1,4 +1,4 @@
-# Commandant is a framework for building command-oriented tools.
+# Commandant is a toolkit for building command-oriented tools.
 # Copyright (C) 2009-2010 Jamshed Kakar.
 #
 # This program is free software; you can redistribute it and/or modify

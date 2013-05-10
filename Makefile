@@ -1,3 +1,7 @@
+all:
+	@test -n "$$VIRTUAL_ENV" || { echo "You're not in a virtualenv.  Create one by running: virtualenv .; . bin/activate"; exit 1; }
+	pip install -r requirements.txt --upgrade
+
 clean:
 	find . -name \*pyc -exec rm {} \;
 	rm -rf _trial_temp
@@ -18,7 +22,7 @@ lint: pep8 pyflakes
 doc:
 	@pydoctor \
 		--project-name Commandant \
-		--project-url "http://launchpad.net/commandant" \
+		--project-url "https://github.com/jkakar/commandant" \
 		--project-base-dir `pwd` \
 		--add-package commandant \
 		--make-html

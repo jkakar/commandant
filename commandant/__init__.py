@@ -12,5 +12,5 @@ directory.  Commandant, when pointed at the directory containing the commands,
 provides a Bazaar-like user interface to discover and run them.
 """
 
-__version__ = "0.4.0"
-__version_info__ = (0, 4, 0)
+__version__ = "0.5.0"
+__version_info__ = (0, 5, 0)

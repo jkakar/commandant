@@ -114,7 +114,7 @@ topics     Topics list.
 Running `example version` shows the version of Commandant being used:
 
 ```
-commandant 0.4.0
+commandant 0.5.0
 ```
 
 ### Create an executable command

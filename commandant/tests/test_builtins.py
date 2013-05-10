@@ -1,4 +1,4 @@
-# Commandant is a framework for building command-oriented tools.
+# Commandant is a toolkit for building command-oriented tools.
 # Copyright (C) 2009-2010 Jamshed Kakar.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -97,8 +97,8 @@ class HelpCommandTest(CommandantTestCase):
         """The help command displays the stock help text."""
         self.command.run()
         self.assertEquals(self.command.outf.getvalue(), """\
-commandant -- A framework for building command-oriented tools.
-http://launchpad.net/commandant
+commandant -- A toolkit for building command-oriented tools.
+https://github.com/jkakar/commandant
 
 Basic commands:
   commandant help commands  List all commands

@@ -1,4 +1,4 @@
-# Commandant is a framework for building command-oriented tools.
+# Commandant is a toolkit for building command-oriented tools.
 # Copyright (C) 2009-2010 Jamshed Kakar.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -33,8 +33,8 @@ from commandant.help_topics import FileHelpTopic
 
 DEFAULT_PROGRAM_NAME = "commandant"
 DEFAULT_PROGRAM_VERSION = __version__
-DEFAULT_PROGRAM_SUMMARY = "A framework for building command-oriented tools."
-DEFAULT_PROGRAM_URL = "http://launchpad.net/commandant"
+DEFAULT_PROGRAM_SUMMARY = "A toolkit for building command-oriented tools."
+DEFAULT_PROGRAM_URL = "https://github.com/jkakar/commandant"
 
 
 class CommandRegistry(object):

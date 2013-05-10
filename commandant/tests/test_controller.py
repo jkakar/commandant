@@ -1,4 +1,4 @@
-# Commandant is a framework for building command-oriented tools.
+# Commandant is a toolkit for building command-oriented tools.
 # Copyright (C) 2009-2010 Jamshed Kakar.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -57,9 +57,9 @@ class CommandControllerTest(ResourcedTestCase):
         self.assertEquals(self.controller.program_name, "commandant")
         self.assertEquals(self.controller.program_version, __version__)
         self.assertEquals(self.controller.program_summary,
-                          "A framework for building command-oriented tools.")
+                          "A toolkit for building command-oriented tools.")
         self.assertEquals(self.controller.program_url,
-                          "http://launchpad.net/commandant")
+                          "https://github.com/jkakar/commandant")
 
     def test_instantiate_with_custom_program_details(self):
         """

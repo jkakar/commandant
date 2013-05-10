@@ -483,3 +483,19 @@ The stock help text shown when the `help` command is run points users
 to the list of commands and help topics that have been registered with
 the controller.  If a `topic_basic` help topic has been registered it
 will be shown instead of the builtin splash page.
+
+
+## Making a release
+
+The first thing to do is login:
+
+    make login
+
+When you're authenticated you can upload a new version to PyPI:
+
+    make publish
+
+Optionally, you can create a tarball release:
+
+    make release
+

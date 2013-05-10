@@ -28,8 +28,6 @@ doc:
 		--make-html
 
 info:
-	@bzr info
-	@echo
 	@echo "Revision:"
 	@bzr revno
 	@echo
@@ -39,6 +37,12 @@ info:
 	@echo
 	@echo "Lines of test code:"
 	@find commandant -name \*py | grep test_ | xargs cat | wc -l
+
+login:
+	@python setup.py sdist register
+
+publish:
+	@python setup.py sdist upload
 
 release:
 	@python setup.py sdist

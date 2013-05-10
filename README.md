@@ -6,8 +6,7 @@ customize its behaviour.  Commandant is inspired by Bazaar's user
 interface and is, in fact, a thin wrapper on top of `bzrlib`.
 
 
-License
-=======
+## License
 
 Commandant is a toolkit for building command-oriented tools.
 Copyright (C) 2009-2010 Jamshed Kakar.
@@ -30,8 +29,29 @@ On Ubuntu systems, the complete text of the GNU General Public
 Version 2 License is in `/usr/share/common-licenses/GPL-2`.
 
 
-Using Commandant
-================
+## Setting up a development environment
+
+Install dependencies and run the test suite:
+
+    virtualenv .
+    . bin/activate
+    make
+
+Or create the virtualenv with `virtualenvwrapper`:
+
+    mkvirtualenv commandant
+    make
+
+And then easily switch to it in the future:
+
+    workon commandant
+
+Run tests:
+
+    make check
+
+
+## Using Commandant
 
 Commandant can be used as a command runner.  The `bin/commandant`
 program can present an application made up of commands and help topics
@@ -45,9 +65,7 @@ alias example="bin/commandant example"
 source example/tab-completion.sh
 ```
 
-
-Create a Commandant program
----------------------------
+### Create a Commandant program
 
 Commands are grouped into Commandant programs.  A Commandant program
 is made up of an arbitrary number of commands stored in a directory:
@@ -63,9 +81,7 @@ in the Commandant program:
 alias example="commandant ~/example"
 ```
 
-
-Getting help
-------------
+### Getting help
 
 Commands provides builtin `help` and `version` commands.  Running
 the `example` program by itself shows basic help information:
@@ -101,9 +117,7 @@ Running `example version` shows the version of Commandant being used:
 commandant 0.4.0
 ```
 
-
-Create an executable command
-----------------------------
+### Create an executable command
 
 One of the easiest ways to add a command to a Commandant program is by
 creating a shell script and making it executable:
@@ -129,9 +143,7 @@ You should see `Hello, world!` printed to your screen when you run
 Hello, world!
 ```
 
-
-Create an executable command that takes arguments
--------------------------------------------------
+### Create an executable command that takes arguments
 
 Commandant will pass all arguments beyond the command name to the
 executable for that command:
@@ -159,9 +171,7 @@ echo Hello there!`:
 Hello there!
 ```
 
-
-Providing help for commands
----------------------------
+### Providing help for commands
 
 The commands in the `example` program have been very easy to add, but
 they could be easier to use.  Commandant's builtin help system can be
@@ -196,9 +206,7 @@ help hello`:
 Print 'Hello, world!' to the screen.
 ```
 
-
-Providing a custom splash page
-------------------------------
+### Providing a custom splash page
 
 The stock help text shown when the `help` command is run points users
 to the list of commands and help topics.  It can be overridden by
@@ -216,9 +224,7 @@ Basic commands:
 The contents of this file are shown when `example help` is run without
 a topic.
 
-
-Providing help topics
----------------------
+### Providing help topics
 
 The builtin help system can also be used to provide general help
 topics, not bound to any command name.  Files in the command directory
@@ -251,9 +257,7 @@ topics     Topics list.
 The contents of this file are shown when `example help greetings` is
 run.
 
-
-Create a Python command
------------------------
+### Create a Python command
 
 Executable commands such as shell scripts are great for some tasks,
 but they are unweildy for others.  Commandant builds on `bzrlib`'s
@@ -303,9 +307,7 @@ This command prints a fascinating fact about rocks.
 More than one Command implementation can be provided in a single
 Python file.
 
-
-Create a Python command that takes arguments
---------------------------------------------
+### Create a Python command that takes arguments
 
 One of the main advantages of writing Python commands is being able to
 express command-line argument and option parameters.  `bzrlib` uses
@@ -342,9 +344,7 @@ The functionality provides by `bzrlib`'s Command implementation makes
 it possible to write commands with very rich command-line
 interfaces.
 
-
-Create a Python command that uses Twisted
------------------------------------------
+### Create a Python command that uses Twisted
 
 Twisted is a popular toolkit for asynchronous network programming.
 Commandant has builtin support for writing commands that need to run
@@ -391,8 +391,7 @@ class cmd_get_page(TwistedCommand):
 When the command finishes, the reactor will be stopped.
 
 
-Embedding Commandant in an application
-======================================
+## Embedding Commandant in an application
 
 To this point, the examples have centered around commands and help
 topics grouped together in directory, with `bin/commandant` used to
@@ -400,9 +399,7 @@ present a frontend.  This mode of using Commandant is useful in
 certain situations, but much of the time embedding Commandant directly
 in an application is more desirable.
 
-
-Bootstrapping an application
-----------------------------
+### Bootstrapping an application
 
 The first step is to create an entry point which registers commands
 and help topics and then subsequently runs your program.  The
@@ -435,9 +432,7 @@ The `builtins` module contains the builtin `help` and `version`
 commands, and the `basic`, `commands`, `hidden-commands` and `topics`
 help topics.
 
-
-Registering application commands
---------------------------------
+### Registering application commands
 
 Commands can be grouped in a module and registered with the command
 controller.  Just like in the examples above, command classes should
@@ -452,9 +447,7 @@ from example import commands
 controller.load_module(commands)
 ```
 
-
-Create a Python help topic
---------------------------
+### Create a Python help topic
 
 In the examples above, help topics are text files in a directory.
 When embedding Commandant in an application, its easier to use Python
@@ -472,9 +465,7 @@ class topic_sample_document(DocstringHelpTopic):
     """
 ```
 
-
-Registering help topics
------------------------
+### Registering help topics
 
 Registering help topics is just like registering commands.  They can
 be grouped in a module and registered with the command controller.
@@ -486,9 +477,7 @@ from example import help_topics
 controller.load_module(help_topics)
 ```
 
-
-Providing a custom splash page
-------------------------------
+### Providing a custom splash page
 
 The stock help text shown when the `help` command is run points users
 to the list of commands and help topics that have been registered with
